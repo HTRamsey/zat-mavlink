@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<mavlink>
+    <include>all.xml</include>
+    <enums>
+        <enum name="TETHER_TENSION">
+            <entry value="0" name="TETHER_TENSION_LOW">
+                <description>Tether tension is low.</description>
+            </entry>
+            <entry value="1" name="TETHER_TENSION_MED">
+                <description>Tether tension is med.</description>
+            </entry>
+            <entry value="2" name="TETHER_TENSION_HIGH">
+                <description>Tether tension is high.</description>
+            </entry>
+        </enum>
+        <enum name="TEMPERATURE_ID">
+            <entry value="0" name="TEMP_ID_UNKNOWN">
+                <description>Temperature Reading Source Is Unknown.</description>
+            </entry>
+            <entry value="1" name="TEMP_ID_PSU">
+                <description>Temperature Reading Source Is PSU.</description>
+            </entry>
+            <entry value="2" name="TEMP_ID_SPOOL">
+                <description>Temperature Reading Source Is Spool.</description>
+            </entry>
+        </enum>
+        <enum name="PSU_TYPE">
+            <entry value="0" name="PSU_TYPE_UNKNOWN">
+                <description>PSU Type Is Unknown.</description>
+            </entry>
+            <entry value="1" name="PSU_TYPE_ELTEK">
+                <description>PSU Type Is PSU.</description>
+            </entry>
+            <entry value="2" name="PSU_TYPE_MEANWELL">
+                <description>PSU Type Is Spool.</description>
+            </entry>
+        </enum>
+    </enums>
+    <messages>
+        <message id="20000" name="ZAT_GPU_DATA">
+            <description>ZAT GPU Data.</description>
+            <field type="int8_t" name="psuTemperature">PSU Temperature.</field>
+            <field type="int8_t" name="spoolTemperature">Spool Temperature.</field>
+            <field type="uint8_t" name="psuFanDuty">PSU Fan Duty.</field>
+            <field type="uint8_t" name="spoolFanDuty">Spool Fan Duty.</field>
+            <field type="uint8_t" name="motorDuty">Motor Duty.</field>
+            <field type="int8_t" name="motorDutyOffset">Motor Duty Offset.</field>
+            <field type="int8_t" name="tetherTension">Tether Tension.</field>
+            <field type="uint8_t" name="tetherLength">Tether Length.</field>
+            <field type="int32_t" name="latitude">GPS Latitude.</field>
+            <field type="int32_t" name="longitude">GPS Longitude.</field>
+            <field type="float" name="altitude">GPS Altitude.</field>
+            <field type="uint16_t" name="pressure">Pressure.</field>
+            <field type="int8_t" name="pressureTemperature">Pressure Temperature.</field>
+            <field type="uint16_t" name="outputVoltage">Output Voltage.</field>
+            <field type="uint8_t" name="psuHighPower">PSU High Power.</field>
+            <field type="float" name="psuVoltage">PSU Voltage.</field>
+            <field type="int16_t" name="motorRpm">Motor RPM.</field>
+            <field type="float" name="heading">GPS Heading.</field>
+            <field type="uint8_t" name="satsInUse">GPS Satellites In Use.</field>
+            <field type="uint8_t" name="gpsFixType">GPS Fix Type.</field>
+            <field type="uint8_t" name="gpsFixMode">GPS Fix Mode.</field>
+            <field type="uint8_t" name="gpsIsValid">GPS Is Valid.</field>
+        </message>
+    </messages>
+</mavlink>
