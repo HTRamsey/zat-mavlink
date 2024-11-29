@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<mavlink>
+    <include>nextvision.xml</include>
+    <messages>
+        <message id="248" name="NVEXT_GND_CRS_REPORT">
+            <description>NVEXT Ground Cross Report.</description>
+            <field type="uint16_t" name="report_type">Report type.</field>
+            <field type="float" name="gnd_crossing_lat">Ground Crossing Latitude.</field>
+            <field type="float" name="gnd_crossing_lon">Ground Crossing Longitude.</field>
+            <field type="float" name="gnd_crossing_alt">Ground Crossing Altitude.</field>
+            <field type="float" name="slant_range">Slant Range.</field>
+        </message>
+        <message id="248" name="NVEXT_LOS_REPORT">
+            <description>NVEXT Line Of Sight Report.</description>
+            <field type="uint16_t" name="report_type">Report type.</field>
+            <field type="float" name="los_x">Line of Sight X.</field>
+            <field type="float" name="los_y">Line of Sight Y.</field>
+            <field type="float" name="los_z">Line of Sight Z.</field>
+            <field type="float" name="los_upper_left_corner_lat">LOS Upper Left Corner Latitude.</field>
+            <field type="float" name="los_upper_left_corner_lon">LOS Upper Left Corner Longitude.</field>
+            <field type="float" name="los_upper_right_corner_lat">LOS Upper Right Corner Latitude.</field>
+            <field type="float" name="los_upper_right_corner_lon">LOS Upper Right Corner Longitude.</field>
+            <field type="float" name="los_lower_right_corner_lat">LOS Lower Right Corner Latitude.</field>
+            <field type="float" name="los_lower_right_corner_lon">LOS Lower Right Corner Longitude.</field>
+            <field type="float" name="los_lower_left_corner_lat">LOS Lower Left Corner Latitude.</field>
+            <field type="float" name="los_lower_left_corner_lon">LOS Lower Left Corner Longitude.</field>
+            <field type="float" name="los_elevation">LOS Elevation.</field>
+            <field type="float" name="los_azimuth">LOS Azimuth.</field>
+        </message>
+        <message id="248" name="NVEXT_SYS_REPORT">
+            <description>NVEXT System Report.</description>
+            <field type="uint16_t" name="report_type">Report type.</field>
+            <field type="float" name="roll">Roll.</field>
+            <field type="float" name="pitch">Pitch.</field>
+            <field type="float" name="fov">Field of View.</field>
+            <field type="uint8_t" name="tracker_status">Tracker Status.</field>
+            <field type="uint8_t" name="recording_status">Recording Status.</field>
+            <field type="uint8_t" name="sensor">Sensor Type.</field>
+            <field type="uint8_t" name="polarity">Polarity Mode.</field>
+            <field type="uint8_t" name="mode">Mode.</field>
+            <field type="uint8_t" name="laser_status">Laser Status.</field>
+            <field type="int16_t" name="tracker_roi_x">Tracker ROI X.</field>
+            <field type="int16_t" name="tracker_roi_y">Tracker ROI Y.</field>
+            <field type="float" name="single_yaw_cmd">Single Yaw Command.</field>
+            <field type="uint8_t" name="snapshot_busy">Snapshot Busy.</field>
+            <field type="float" name="cpu_temp">CPU Temperature.</field>
+            <field type="float" name="camera_ver">Camera Version.</field>
+            <field type="int32_t" name="trip2_ver">Trip2 Version.</field>
+            <field type="uint16_t" name="bit_status">Bit Status.</field>
+            <field type="uint8_t" name="status_flags">Status Flags.</field>
+            <field type="uint8_t" name="camera_type">Camera Type.</field>
+            <field type="float" name="roll_rate">Roll Rate.</field>
+            <field type="float" name="pitch_rate">Pitch Rate.</field>
+            <field type="float" name="cam_temp">Camera Temperature.</field>
+            <field type="float" name="roll_derot">Roll Derotation.</field>
+        </message>
+    </messages>
+</mavlink>
